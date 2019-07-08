@@ -9,7 +9,7 @@ router.get('/', (req, res, next)=> {
 });
 
 /*  GET create posts form
-    /posts
+    /posts/new
 */
 router.get('/new', (req, res, next)=> {
   res.send('from /posts/new')
