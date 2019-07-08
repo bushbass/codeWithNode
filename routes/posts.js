@@ -1,53 +1,40 @@
 const express = require('express');
 const router = express.Router();
 
-/*  GET posts index
-    /posts
-*/
-router.get('/', (req, res, next)=> {
-  res.send('from /posts')
+/* GET posts index /posts */
+router.get('/', (req, res, next) => {
+  res.send('/posts');
 });
 
-/*  GET create posts form
-    /posts/new
-*/
-router.get('/new', (req, res, next)=> {
-  res.send('from /posts/new')
+/* GET posts new /posts/new */
+router.get('/new', (req, res, next) => {
+  res.send('/posts/new');
 });
 
-/*  POST create post action
-    /posts
-*/
-router.post('/', (req, res, next)=> {
-  res.send('from create action /posts')
+/* POST posts create /posts */
+router.post('/', (req, res, next) => {
+  res.send('CREATE /posts');
 });
 
-/*  GET one post
-    /posts/:id
-*/
-router.get('/:id', (req, res, next)=> {
-  res.send('from get one post /posts/:id')
+/* GET posts show /posts/:id */
+router.get('/:id', (req, res, next) => {
+  res.send('SHOW /posts/:id');
 });
 
-/*  GET edit post form
-    /posts/:id
-*/
-router.get('/:id/edit', (req, res, next)=> {
-  res.send('from edit form /posts/:id')
+/* GET posts edit /posts/:id/edit */
+router.get('/:id/edit', (req, res, next) => {
+  res.send('EDIT /posts/:id/edit');
 });
 
-/*  PUT edit post action
-    /posts/:id
-*/
-router.put('/:id', (req, res, next)=> {
-  res.send('from edit put /posts/:id')
+/* PUT posts update /posts/:id */
+router.put('/:id', (req, res, next) => {
+  res.send('UPDATE /posts/:id');
 });
 
-/*  DELETE one post
-    /posts/:id
-*/
-router.delete('/:id', (req, res, next)=> {
-  res.send('from delete /posts/:id')
+/* DELETE posts destroy /posts/:id */
+router.delete('/:id', (req, res, next) => {
+  res.send('DELETE /posts/:id');
 });
+
 
 module.exports = router;
